@@ -10,6 +10,4 @@
 | 実装した機能についてのGIF|実装した機能について、それぞれどのような特徴があるのか列挙しましょう。GIFを添えることで、イメージがしやすくなります。|
 | 実装予定機能||
 | データベース設計|	![ER図](https://gyazo.com/04aa6cabf7a86c906c746856f7fd0c54.png)|
-| ローカルでの動作方法|`% git clone git@github.com:hayashihiroaki/review30561.git`  `%bundle install`  
-ruby '2.6.5'  
-rails '5.2.4'|
+| ローカルでの動作方法|`% git clone git@github.com:hayashihiroaki/review30561.git`  `%bundle install`   ruby '2.6.5'   rails '5.2.4'  |
