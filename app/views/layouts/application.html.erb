@@ -25,7 +25,7 @@
       <div class="navbar-brand">
         <p class="navbar-item">
           <%= link_to root_path do %>
-            <strong class="is-size-3" style="font-family: cursive; color: black;">review</strong>
+            <strong class="is-size-3 ml-3" style="font-family: serif; color: black;">review</strong>
           <% end %>
         </p>
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -37,25 +37,25 @@
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
           <%= link_to shops_path, class: "navbar-item" do %>
-            店一覧
+            List of stores
           <% end %>
         </div>
         <div class="navbar-end">
           <div class="navbar-item">
             <% if user_signed_in? %>
-              <p class="navbar-item">ようこそ <%= current_user.username %> さん</p>
+              <p class="navbar-item">ようこそ<%= current_user.username %>さん</p>
             <% end %>
             <div class="buttons">
               <% if user_signed_in? %>
                 <%= link_to destroy_user_session_path, method: :delete, class: "button" do %>
-                  ログアウト
+                  Log Out
                 <% end %>
               <% else %>
                 <%= link_to new_user_session_path, class: "button" do %>
-                  ログイン
+                  Log in
                 <% end %>
                 <%= link_to new_user_registration_path, class: "button" do %>
-                  新規登録
+                  Sign Up
                 <% end %>
               <% end %>
             </div>
