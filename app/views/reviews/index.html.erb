@@ -23,7 +23,7 @@
         <table class="table is-fullwidth has-text-centered">
           <thead>
             <tr>
-              <th>ユーザー</th><th>点数</th><th>内容</th>
+              <th>ユーザー</th><th>点数</th><th>内容</th><th>いいね</th>
             </tr>
           </thead>
           <tbody>
@@ -32,6 +32,21 @@
                 <td><%= review.user.username %></td>
                 <td><%= review.score %></td>
                 <td><%= review.content %></td>
+                <td>
+                <% if user_signed_in? && current_user.id != review.user_id %>
+                  <% if current_user.already_favorited?(review) %>
+                    <%= link_to shop_review_favorites_path(@shop.id,review), method: :delete do %>
+                      <i class="fas fa-heart"></i>
+                    <% end %>
+                    <%= review.favorites.count %>
+                  <% else %>
+                    <%= link_to shop_review_favorites_path(@shop.id,review), method: :post do %>
+                      <i class="far fa-heart"></i>
+                    <% end %>
+                    <%= review.favorites.count %>
+                  <% end %>
+                <% end %>
+                </td>
               </tr>
             <% end %>
           </tbody>
