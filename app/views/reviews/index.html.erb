@@ -36,12 +36,12 @@
                 <% if user_signed_in? && current_user.id != review.user_id %>
                   <% if current_user.already_favorited?(review) %>
                     <%= link_to shop_review_favorites_path(@shop.id,review), method: :delete do %>
-                      <i class="fas fa-heart"></i>
+                      <i class="fas fa-heart heart_red"></i>
                     <% end %>
                     <%= review.favorites.count %>
                   <% else %>
                     <%= link_to shop_review_favorites_path(@shop.id,review), method: :post do %>
-                      <i class="far fa-heart"></i>
+                      <i class="far fa-heart heart_red"></i>
                     <% end %>
                     <%= review.favorites.count %>
                   <% end %>
