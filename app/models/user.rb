@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
+  validates :username,presence: true
+
   def already_favorited?(review)
     favorites.exists?(review_id: review.id)
   end
