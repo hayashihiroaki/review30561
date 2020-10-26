@@ -7,6 +7,6 @@
 | 利用方法   | ショップの相対的な評価が閲覧できます。新規登録、ログインすることで自身でもショップのレビューを投稿できます。そして、他ユーザーが投稿したレビューに対していいねをすることができます。 |
 | 目指した課題解決   | お店選びの選択肢に迷っている時、誰かの意見を参考にできるようユーザーがお店の口コミを投稿・シェアができることでお店の相対的な評価が見られるサービスを想定して作成しました。 |
 | 洗い出した要件|ユーザー管理・レビュー投稿・レビュー一覧表示・ショップ一覧・いいね機能|
-| 実装した機能についてのGIF|レビューを星数で表現できる機能![star](https://gyazo.com/0ad411169f35f3ba934ef62a12212753.gif)<br>星を選択する際にjsのfor文を使用しマウスの動作に合わせて星を選択できるよう実装。<br>モデルでaverageメソッドを使いレビューの平均値を計算する新たなメソッドを作成し、レビューの平均値をビューに反映。<br>---いいね機能![favorite](https://gyazo.com/1d6b02beaeef8eca57af78f3f6a7b1bf.gif)<br>|
+| 実装した機能についてのGIF|###レビューを星数で表現できる機能![star](https://gyazo.com/0ad411169f35f3ba934ef62a12212753.gif)<br>星を選択する際にjsのfor文を使用しマウスの動作に合わせて星を選択できるよう実装。<br>モデルでaverageメソッドを使いレビューの平均値を計算する新たなメソッドを作成し、レビューの平均値をビューに反映。<br>###いいね機能![favorite](https://gyazo.com/1d6b02beaeef8eca57af78f3f6a7b1bf.gif)<br>|
 | データベース設計|	![ER図](https://gyazo.com/f08ae7eea06ea30a1cb4b2eb28d7ec60.png)|
 | ローカルでの動作方法|`% git clone git@github.com:hayashihiroaki/review30561.git`<br>  `%bundle install` <br>`rails db:migrate` <br>`rails db:seed` <br>ruby: 2.6.5 <br>rails: 5.2.4|
