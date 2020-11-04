@@ -6,9 +6,15 @@
           <br>
           <div class="columns is-centered">
             <div class="column is-3">
-              <%= link_to "ログイン", new_user_session_path, class: "button is-fullwidth" %>
+              <%= link_to "List of stores", shops_path, class: "button is-fullwidth" %>
               <br>
-              <%= link_to "新規登録", new_user_registration_path, class: "button is-fullwidth" %>
+              <% if user_signed_in? %>
+                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "button is-fullwidth" %>
+              <% else %>
+                <%= link_to "Log in", new_user_session_path, class: "button is-fullwidth" %>
+                <br>
+                <%= link_to "Sign up", new_user_registration_path, class: "button is-fullwidth" %>
+              <% end %>
             </div>
           </div>
       </div>
